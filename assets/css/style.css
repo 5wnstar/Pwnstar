@@ -4,25 +4,34 @@
   box-sizing: border-box;
   font-family: "Nunito", sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 header {
-  background-image: url(../img/wp2691571.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
+    url(../img/wp2691571.jpg);
+  background-attachment: fixed;
   background-size: cover;
   background-position: 50%;
   height: 100vh;
   position: relative;
   text-align: center;
+  background: blur;
 }
 header .navlinks {
   display: flex;
   justify-content: space-around;
   /* text-align: end; */
   align-items: center;
+  /* content: fixed;
+  padding-left: 15rem;
+  padding-right: 15rem; */
 }
 header .navlinks a {
-  text-align: end;
+  text-align: center;
+  margin-top: 1.5rem;
   text-decoration: none;
   color: white;
-  /* align-items: flex-end; */
   font-weight: 800;
   font-size: large;
 }
@@ -119,39 +128,33 @@ header .sec:hover {
 }
 
 /* Track Ends */
-
-/* Write-Up Begins */
+/* WriteUps Begin */
+.writeups {
+  justify-content: center;
+  text-align: center;
+}
+.full-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.full-container .container {
+  margin-bottom: 20px;
+}
 .writeups h1 {
-  /* display: flex; */
   text-align: center;
   color: #0a034a;
 }
-/* .full-cointainer {
-  display: flex;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 60px;
-  flex-direction: column-reverse;
-  margin-top: 2rem;
+/* .full-container .container {
+  min-height: 500px;
 } */
 
-.writeups .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 60px;
-  margin-top: 2rem;
-}
 .container-wrapper {
   padding: 10px;
-  box-shadow: 0 4px 8px 0;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   transition: 0.3s;
   border-radius: 5px;
-  width: 25%;
+  min-height: 400px;
 }
 .container-wrapper img {
   width: 100%;
@@ -186,6 +189,10 @@ header .sec:hover {
   font-size: 14px;
   font-weight: 800;
 }
+.tool:hover {
+  position: relative;
+  top: 10px;
+}
 /* Tools Ends */
 
 /* Services Starts */
@@ -198,9 +205,9 @@ header .sec:hover {
 }
 .services h2 {
   color: #fff;
-  margin-bottom: 40px;
+  padding-top: 1rem;
   text-align: center;
-  /* margin: 9rem; */
+  margin-top: 3rem;
 }
 
 .service-wrapper {
@@ -212,11 +219,15 @@ header .sec:hover {
   border-radius: 4rem;
 }
 .service-card {
-  padding: 2px 16px;
+  /* padding: 2px 16px; */
   width: 200px;
   background-color: white;
   border-radius: 10px;
   height: max-content;
+}
+.service-card:hover {
+  position: relative;
+  bottom: 10px;
 }
 .service-card h3 {
   color: #0a034a;
@@ -253,4 +264,19 @@ header .sec:hover {
   margin-top: 5rem;
   margin-left: 20rem;
   fill: #0a034a;
+}
+@media (min-width: 768px) {
+  .full-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .full-container .container {
+    width: 48%;
+  }
+}
+@media (min-width: 1024px) {
+  .full-container .container {
+    width: 32%;
+  }
 }
